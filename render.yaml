@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: heyweb-server
+    env: node
+    plan: free
+    buildCommand: |
+      cd server
+      npm install
+    startCommand: |
+      node index.js
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        value: https://heyweb-frontend.onrender.com
+
+  - type: static
+    name: heyweb-frontend
+    env: static
+    plan: free
+    buildCommand: |
+      cd frontend
+      npm install
+      npm run build
+    staticPublishPath: frontend/dist
