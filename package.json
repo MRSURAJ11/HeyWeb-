@@ -1,0 +1,17 @@
+{
+  "name": "heyweb",
+  "version": "1.0.0",
+  "description": "Voice-First AI Assistant",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "server": "cd server && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "install-all": "npm install && cd frontend && npm install && cd ../server && npm install",
+    "start": "concurrently \"npm run server:start\" \"npm run frontend:build\"",
+    "server:start": "cd server && npm start",
+    "frontend:build": "cd frontend && npm run build && npm run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeyWeb! Voice Assistant</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+      color: white;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 4px 0;
+    }
+    .subtitle {
+      font-size: 12px;
+      opacity: 0.7;
+      margin: 0;
+    }
+    .status {
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      margin-right: 8px;
+    }
+    .commands {
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .command {
+      font-size: 12px;
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    .command:last-child {
+      margin-bottom: 0;
+    }
+    .button {
+      width: 100%;
+      padding: 8px 16px;
+      background: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .button:hover {
+      background: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">HeyWeb!</div>
+    <div class="subtitle">Voice-First AI Assistant</div>
+  </div>
+
+  <div class="status">
+    <div>
+      <span class="status-indicator"></span>
+      <span>Web Automation Active</span>
+    </div>
+    <div style="font-size: 11px; opacity: 0.7; margin-top: 4px;">
+      Voice commands enabled for this page
+    </div>
+  </div>
+
+  <div class="commands">
+    <div style="font-size: 12px; font-weight: 600; margin-bottom: 8px;">Try these commands:</div>
+    <div class="command">"click login"</div>
+    <div class="command">"type username john"</div>
+    <div class="command">"scroll down"</div>
+    <div class="command">"go back"</div>
+    <div class="command">"refresh page"</div>
+  </div>
+
+  <button class="button" id="openApp">Open HeyWeb! App</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
